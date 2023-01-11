@@ -1,22 +1,22 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import Greeting from "./components/pure/greeting";
-import Greetingf from "./components/pure/greetingF";
+// import Greeting from "./components/pure/greeting";
+// import Greetingf from "./components/pure/greetingF";
 import TaskListComponent from "./components/container/task_list";
-import Ejemplo1 from "./hooks/Ejemplo1";
-import Ejemplo2 from "./hooks/Ejemplo2";
-import MiComponenteConContexto from "./hooks/Ejemplo3";
-import Ejemplo4 from "./hooks/Ejemplo4";
-import Greetingstyled from "./components/pure/greetingStyled";
-import Father from "./components/container/father";
+// import Ejemplo1 from "./hooks/Ejemplo1";
+// import Ejemplo2 from "./hooks/Ejemplo2";
+// import MiComponenteConContexto from "./hooks/Ejemplo3";
+// import Ejemplo4 from "./hooks/Ejemplo4";
+// import Greetingstyled from "./components/pure/greetingStyled";
+// import Father from "./components/container/father";
 // import Optionalrender from "./components/pure/optionalRender";
 // import Loginformik from "./components/pure/forms/loginFormik";
 // import Registerformik from "./components/pure/forms/registerFormik";
 // import Asyncexample from "./components/pure/AsyncExample";
 // import Observableexample from "./components/pure/ObservableExample";
 // import Fetchexample from "./components/pure/FetchExample";
-// import Axiosexample from "./components/pure/AxiosExample";
-// import Axioscrudexample from "./components/pure/AxiosCRUDExample";
+import Axiosexample from "./components/pure/AxiosExample";
+import Axioscrudexample from "./components/pure/AxiosCRUDExample";
 
 function App() {
   return (
@@ -56,10 +56,10 @@ function App() {
       {/* <Observableexample></Observableexample> */}
       {/* <Fetchexample></Fetchexample> */}
       {/* <Axiosexample></Axiosexample> */}
-      {/* <Axioscrudexample></Axioscrudexample> */}
+      <Axioscrudexample></Axioscrudexample>
 
       {/* PROYECTO FINAL */}
-      <TaskListComponent></TaskListComponent>
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }

@@ -12,7 +12,7 @@ export const login = (email, password) => {
         password: password
     }
 
-    // Returns the response with a Promise
+        // Returns the response with a Promise
     return axios.post('https://reqres.in/api/login', body)
 
 }

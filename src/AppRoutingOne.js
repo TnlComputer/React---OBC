@@ -3,9 +3,9 @@ import { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
+  Routes,
   Link,
-  Redirect,
+  // Navigate,
 } from "react-router-dom";
 
 import HomePage from "./pages/home/HomePage";
@@ -19,7 +19,7 @@ import Taskdetailpage from "./pages/tasks/TaskDetailPage";
 import Loginpage from "./pages/auth/LoginPage";
 
 function AppRoutingOne() {
-  let logged = false;
+  const logged = false;
 
   let taskList = [
     {
@@ -32,11 +32,17 @@ function AppRoutingOne() {
       name: "Task 2",
       description: "My second Task",
     },
+    {
+      id: 3,
+      name: "Task 3",
+      description: "My third Task",
+    },
   ];
 
   useEffect(() => {
-    logged = localStorage.getItem("credentials");
+    const logged = localStorage.getItem("credentials");
     console.log("User Logged?", logged);
+    // console.log("Datos Logged?", JSON.stringify(logged));
   }, []);
 
   return (
@@ -46,6 +52,7 @@ function AppRoutingOne() {
           <Link to="/">|| HOME |</Link>
           <Link to="/about">| ABOUT |</Link>
           <Link to="/faqs">| FAQs |</Link>
+          {/* <Link to="/tasks">| Tasks|</Link> */}
           <Link to="/task/1">| Task 1 |</Link>
           <Link to="/task/2">| Task 2 |</Link>
           <Link to="/any404">| Not Existing Route |</Link>
@@ -53,41 +60,46 @@ function AppRoutingOne() {
         </aside>
 
         <main>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/online-state" component={Statepage} />
-            <Route path="/login" component={Loginpage}>
+          <Routes>
+            <Route exact path="/" element={<HomePage />}></Route>
+            <Route exact path="/online-state" element={<Statepage />}></Route>
+            <Route path="/login" element={<Loginpage />}>
               {logged
                 ? () => {
                     alert("You are logged in. Redirecting to home...");
-                    return <Redirect to="/" />;
+                    return <Route path="/" />;
                   }
                 : () => {
-                    return <Loginpage></Loginpage>;
+                    <Loginpage />;
                   }}
             </Route>
-            <Route path="/(about|faqs)" component={Aboutpage} />
-            <Route path="/profile" component={Profilepage}>
+            <Route path="/about" element={<Aboutpage />}></Route>
+            <Route path="/faqs" element={<Aboutpage />}></Route>
+            <Route path="/profile" element={<Profilepage />}>
               {logged ? (
                 <Profilepage />
               ) : (
                 () => {
-                  alert("You must be logged in. Redirecting to login...");
-                  return <Redirect to="/login" />;
+                  return <Route path="/login" />;
                 }
               )}
             </Route>
-            <Route path="/tasks" component={Taskspage} />
+            <Route path="/tasks" element={<Taskspage />}></Route>
             <Route
+              exact
+              path="/task/:id"
+              element={<Taskdetailpage task={taskList} />}
+            ></Route>
+            {/* <Route
               exact
               path="/task/:id"
               render={({ match }) => (
                 <Taskdetailpage task={taskList[match.params.id - 1]} />
               )}
-            ></Route>
+            ></Route> */}
             {/* 404 - Page No Found */}
-            <Route component={Notfoundpage} />
-          </Switch>
+            <Route path="/any404" element={<Notfoundpage />}></Route>
+          </Routes>
         </main>
       </div>
     </Router>

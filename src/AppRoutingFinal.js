@@ -1,8 +1,8 @@
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect,
+  Routes,
+  // Redirect,
 } from "react-router-dom";
 
 import Loginpage from "./pages/auth/LoginPage";
@@ -16,23 +16,29 @@ function AppRoutingFinal() {
   return (
     <Router>
       {/* Route Switch */}
-      <Switch>
+      <Routes>
         {/* Redirections to protect our routes */}
+
         <Route exact path="/">
           {loggedIn ? (
-            <Redirect from="/" to="/dashboard" />
+            <Route from="/" to="/dashboard" />
           ) : (
-            <Redirect from="/" to="/login" />
+            <Route from="/" to="/login" />
           )}
         </Route>
         {/* Login Route */}
-        <Route exact path="/login" component={Loginpage} />
+        <Route exact path="/login" element={<Loginpage />}></Route>
         {/* DashBoard Route */}
-        <Route exact path="/dashboard">
-          {loggedIn ? <Dashboardpage /> : <Redirect from="/" to="/login" />}
-        </Route>
-        <Route component={Notfoundpage} />
-      </Switch>
+
+        <Route exact path="/dashboard" element={<Dashboardpage />}></Route>
+        {/* <Route exact path="/dashboard" 
+        {loggedIn ? (
+          element={Dashboardpage >> </Route>
+        ) : (
+          <Route exact path="/login" element={<Loginpage />}> </Route>
+       */}
+        <Route path="*" element={<Notfoundpage />}></Route>
+      </Routes>
     </Router>
   );
 }
