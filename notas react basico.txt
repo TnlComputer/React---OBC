@@ -1,0 +1,53 @@
+React Route V6
+switch => Routes
+useParams hook para pasar datos
+<Oulet /> para pintar la pagina anidad - renderizar
+Redirect => Navigate
+
+  
+ Materials UIA
+ npm install @mui/material @emotion/react @emotion/styled
+ 
+ Herramienta 
+
+Una pequeña utilidad (228B) para construir classNamecadenas condicionalmente.
+También sirve como un reemplazo directo más rápido y más pequeño para el classnamesmódulo.
+ 
+ npm install --save clsx
+ 
+ 
+Material Icons
+npm install @mui/icons-material --save
+
+axios
+npm install axios --save
+
+REDUX
+monitoriza los estados global de la app
+
+root reducer
+gestiona los estados de cada reducer de ese tipo y genera un nuevo estado en el otro componente
+
+ o sea, componenteA->Actions->ROOT Reducer->Store->componenteB, se actualiza el estado y la vista del componenteB
+
+instalacion 
+1.- npm install react-redux
+2.- npx create-react-app my-app --template redux
+
+solo lo instalamos en development - modo desarrollo solamente
+3.-npm i redux-devtools-extension --save-dev
+
+redux-saga
+npm i redux-saga --save
+
+
+
+Instalar versiones exactas del package.json 
+npm i -E
+
+ el -E te da las versiones exactas
+
+
+ npm i redux-saga --save
+
+
