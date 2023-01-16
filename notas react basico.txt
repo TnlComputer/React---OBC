@@ -51,3 +51,85 @@ npm i -E
  npm i redux-saga --save
 
 
+ WEBPACK
+
+ 1.-Babel
+ 2.-WEBPACK
+ 3-.Slint
+
+procedimiento
+
+ creamos 1 carpeta
+npm inst 
+llenamos lo que nos pide en la configuracion, test comman lo dejamos en blanco
+al final damos enter asi creo qeu package.json
+
+totas estas son herramientas de desarrollo
+
+npm i --save-dev @babel/cli 
+npm i --save-dev @babel/core 
+npm i --save-dev @babel/preset-env
+npm i --save-dev @babel/preset-react
+npm i --save-dev babel-loader
+npm i --save-dev @babel/plugin-transform-modules-commonjs
+npm i --save-dev @babel/plugin-transform-runtime
+npm i --save-dev css-loader
+npm i --save-dev documentation
+npm i --save-dev eslint
+npm i --save-dev eslint-loader
+npm i --save-dev webpack
+npm i --save-dev webpack-cli 
+npm i --save-dev webpack-dev-server
+npm i --save-dev node-sass 
+npm i --save-dev sass-loader
+npm i --save-dev html-webpack-plugin
+npm i --save-dev file-loader
+npm i --save-dev source-map-loader
+npm i --save-dev mini-css-extract-plugin
+
+herramientas de produccion
+
+npm i --save react 
+npm i --save react-dom
+npm i --save react-router-dom
+npm i --save redux
+npm i --save react-redux 
+npm i --save redux-saga
+npm i --save axios
+npm i --save bootstrap
+
+---------------------- Proyecto Final ----------------------------
+npm i --save-dev @babel/cli
+npm i --save-dev @babel/core
+npm i --save-dev @babel/plugin-transform-modules-commonjs
+npm i --save-dev @babel/plugin-transform-runtime
+npm i --save-dev @babel/preset-env
+npm i --save-dev @babel/preset-react
+npm i --save-dev babel-loader
+npm i --save-dev css-loader
+npm i --save-dev  documentation
+npm i --save-dev eslint
+npm i --save-dev eslint-config-airbnb
+npm i --save-dev eslint-loader
+npm i --save-dev eslint-plugin-import
+npm i --save-dev eslint-plugin-jsx-a11y
+npm i --save-dev eslint-plugin-react
+npm i --save-dev eslint-plugin-react-hooks
+npm i --save-dev file-loader
+npm i --save-dev html-webpack-plugin
+npm i --save-dev mini-css-extract-plugin
+npm i --save-dev netlify-cli
+npm i --save-dev node-sass
+npm i --save-dev sass-loader
+npm i --save-dev source-map-loader
+npm i --save-dev webpack
+npm i --save-dev webpack-cli
+npm i --save-dev webpack-dev-server
+npm i --save axios
+npm i --save bootstrap
+npm i --save react
+npm i --save react-dom
+npm i --save react-redux
+npm i --save react-router-dom
+npm i --save redux
+npm i --save redux-saga
