@@ -4,7 +4,8 @@ const path = require('path');
 // Para reducir el tamaño de las hojas de estilo de nuestro proyecto
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Para el template del HTML que va a usar Webpack
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // Para reducir los CSS
-const { SourceMapDevToolPlugin } = require('webpack'); // Para conocer el Source Map de nuestro proyecto
+const { SourceMapDevToolPlugin } = require('webpack');
+// Para conocer el Source Map de nuestro proyecto
 
 // Configuraciones de puerto
 const port = process.env.PORT || 3000;
@@ -31,7 +32,9 @@ module.exports = {
         enforce: 'pre',
         test: /(\.js|\.jsx)$/,
         exclude: /node_modules/,
-        use: ['eslint-loader', 'source-map-loader'],
+        // use: ['eslint-webpack-plugin'],
+        // use: ['source-map-loader'],
+        use: ['eslint-webpack-plugin', 'source-map-loader'],
       },
       // Reglas para archivos JS y JSX
       // Reglas de Babel ES y JSX

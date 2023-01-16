@@ -1,3 +1,9 @@
+Instalar versiones exactas del package.json 
+npm i -E
+
+ el -E te da las versiones exactas
+
+ ******************************
 React Route V6
 switch => Routes
 useParams hook para pasar datos
@@ -40,29 +46,18 @@ solo lo instalamos en development - modo desarrollo solamente
 redux-saga
 npm i redux-saga --save
 
+WEBPACK
 
-
-Instalar versiones exactas del package.json 
-npm i -E
-
- el -E te da las versiones exactas
-
-
- npm i redux-saga --save
-
-
- WEBPACK
-
- 1.-Babel
- 2.-WEBPACK
- 3-.Slint
+1.-Babel
+2.-WEBPACK
+3-.Slint
 
 procedimiento
 
  creamos 1 carpeta
 npm inst 
 llenamos lo que nos pide en la configuracion, test comman lo dejamos en blanco
-al final damos enter asi creo qeu package.json
+al final damos enter asi creo que package.json
 
 totas estas son herramientas de desarrollo
 
@@ -71,12 +66,10 @@ npm i --save-dev @babel/core
 npm i --save-dev @babel/preset-env
 npm i --save-dev @babel/preset-react
 npm i --save-dev babel-loader
-npm i --save-dev @babel/plugin-transform-modules-commonjs
-npm i --save-dev @babel/plugin-transform-runtime
 npm i --save-dev css-loader
 npm i --save-dev documentation
 npm i --save-dev eslint
-npm i --save-dev eslint-loader
+npm i --save-dev eslint-webpack-plugin // antes era => eslint-loader
 npm i --save-dev webpack
 npm i --save-dev webpack-cli 
 npm i --save-dev webpack-dev-server
@@ -86,6 +79,8 @@ npm i --save-dev html-webpack-plugin
 npm i --save-dev file-loader
 npm i --save-dev source-map-loader
 npm i --save-dev mini-css-extract-plugin
+npm i --save-dev @babel/plugin-transform-modules-commonjs
+npm i --save-dev @babel/plugin-transform-runtime
 
 herramientas de produccion
 
@@ -101,8 +96,6 @@ npm i --save bootstrap
 ---------------------- Proyecto Final ----------------------------
 npm i --save-dev @babel/cli
 npm i --save-dev @babel/core
-npm i --save-dev @babel/plugin-transform-modules-commonjs
-npm i --save-dev @babel/plugin-transform-runtime
 npm i --save-dev @babel/preset-env
 npm i --save-dev @babel/preset-react
 npm i --save-dev babel-loader
@@ -110,7 +103,7 @@ npm i --save-dev css-loader
 npm i --save-dev  documentation
 npm i --save-dev eslint
 npm i --save-dev eslint-config-airbnb
-npm i --save-dev eslint-loader
+npm i --save-dev eslint-webpack-plugin
 npm i --save-dev eslint-plugin-import
 npm i --save-dev eslint-plugin-jsx-a11y
 npm i --save-dev eslint-plugin-react
@@ -125,6 +118,8 @@ npm i --save-dev source-map-loader
 npm i --save-dev webpack
 npm i --save-dev webpack-cli
 npm i --save-dev webpack-dev-server
+npm i --save-dev @babel/plugin-transform-modules-commonjs
+npm i --save-dev @babel/plugin-transform-runtime
 npm i --save axios
 npm i --save bootstrap
 npm i --save react
