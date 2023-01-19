@@ -1,0 +1,15 @@
+***************************
+VITE
+crear un proyecto co Vite
+
+1.- npm init -y
+2.-mkdir proyectos
+3.-cd proyectos
+4.-npm create vide@latest
+seguimos los pasos y desp hacemos los pasos que nos dice y nos muestra ya la direccion para ejecutarlo
+pasamos a la carpeta con 
+
+code . asi pone como root esta proyecto
+
+
+React - Avanzado
